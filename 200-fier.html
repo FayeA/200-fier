@@ -2,68 +2,33 @@
 <html>
 	<head>
 		<meta charset="utf-8">
+		<meta http-equiv="Cache-control" content="no-cache">
+
 		<title>200-fier</title>
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/bootstrap-theme.min.css">
 		<link rel="stylesheet" href="css/style.css">
+		<script src="js/jQuery.js"></script>
 		<script src="js/200-fier.js"></script>
+
 	</head>
 	<body>
 		<div class="content">
-			<div class="row">
-				<div class="col-md-12">
-					<h1>200-fier</h1>
+			<h1>200-fier</h1>
+			<p>This tool splits a long text into 200-character chunks that can be easily copied. This only works on Internet Explorer.</p>
+			<a href="#" onclick="clearstep1()" id="clear200fier">To start over (clear steps 1 and 2), click here.</a>
+			<!-- This form is for step 1 -->
+			<form>
+				<div class="form-group">
+					<label for="step1"><h2>Step 1 <small>Paste/type the text to 200-fy, then click the 200-fy! button</small></h2></label>
+					<textarea class="form-control" rows="4" id="step1form"></textarea>
+					<button type="button" class="btn btn-primary btn-md" onclick="step1()" id="step1button">200-fy! Click this to see step 2</button>
 				</div>
+			</form>
+			<!-- End of form for step 1 -->
+			<!-- Form for step 2 will appear at click of button-->
 
-				<!-- This div holds the form -->
-				<div class="col-md-12">
-
-					<!-- This form is for step 1 -->
-					<form>
-						<div class="form-group">
-							<label for="step1"><h2>Step 1 <small>Paste/type the text to 200-fy, then click 200-fy! button</small></h2></label>
-							<textarea class="form-control" rows="4" id="step1text"></textarea>
-							<button type="button" class="btn btn-primary btn-lg" onclick="step1()">200-fy!</button>
-						</div>
-					</form>
-					<!-- End of form for step 1 -->
-
-					<!-- This form is for step 2 -->
-					<form class="form-horizontal">
-						<label for="step2"><h2>Step 2 <small>Copy the 200-fied texts and paste them to their destination</small></h2></label>
-
-						<!-- This div contains 200-fied text and copy botton-->
-						<div class="form-group">
-							<div class="col-md-12">
-								<textarea class="form-control" id="step2-1" type="text" row="2" readonly></textarea>
-								<button type="button" class="btn btn-primary btn-md">Copy</button>
-							</div>
-						</div>
-
-						<!-- This div contains 200-fied text and copy botton-->
-						<div class="form-group">
-							<div class="col-md-12">
-								<textarea class="form-control" id="step2-2" type="text" row="2" readonly></textarea>
-								<button type="button" class="btn btn-primary btn-md right">Copy</button>
-							</div>
-						</div>
-
-						<!-- This div contains 200-fied text and copy botton-->
-						<div class="form-group">
-							<div class="col-md-12">
-								<textarea class="form-control" id="step2-3" type="text" row="2" readonly></textarea>
-								<button type="button" class="btn btn-primary btn-md">Copy</button>
-							</div>
-						</div>
-
-					</form>
-					<!-- End of form for step 2 -->
-
-				</div>
-				<!-- End of div that holds forms -->
-
-			</div>
-			<!-- End of div row -->
+			
 
 		</div>
 		<!-- End of div content -->
