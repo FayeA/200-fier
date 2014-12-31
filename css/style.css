@@ -1,5 +1,48 @@
-.content{
+body{
 	width: 90%;
 	margin-left: auto;
 	margin-right: auto;
+
+	color: #666;
+	font-family: Arial;
+	font-size: 9pt;
 }
+
+h1{
+	font-size: 18pt;
+	color: #333;
+}
+
+#clear200fier{
+	display: inline:block;
+	text-align: right;
+}
+
+h2{
+	font-size: 12pt;
+	color: #333;
+}
+
+p{
+	margin-top: 0;
+	margin-bottom: 15px;
+}
+
+textarea{
+  box-shadow:inset 0px 1px 0px 0px #ffffff;
+  background-color:#ededed;
+	border:1px solid #dcdcdc;
+	display:block;
+  width: 90%;
+  min-height:  90px;
+  margin-top: 0;
+  margin-bottom: 4px;
+  font-size: 9pt;
+  color: #333;
+}
+
+textarea.step2form{margin-bottom: 2px;}
+textarea.step2form:hover {background-color:#ddd;}
+textarea.step2form:active {background-color:#87cae7}
+
+
