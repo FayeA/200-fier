@@ -6,6 +6,7 @@
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/bootstrap-theme.min.css">
 		<link rel="stylesheet" href="css/style.css">
+		<script src="js/200-fier.js"></script>
 	</head>
 	<body>
 		<div class="content">
@@ -21,8 +22,8 @@
 					<form>
 						<div class="form-group">
 							<label for="step1"><h2>Step 1 <small>Paste/type the text to 200-fy, then click 200-fy! button</small></h2></label>
-							<textarea class="form-control" rows="4"></textarea>
-							<button type="button" class="btn btn-primary btn-lg">200-fy!</button>
+							<textarea class="form-control" rows="4" id="step1text"></textarea>
+							<button type="button" class="btn btn-primary btn-lg" onclick="step1()">200-fy!</button>
 						</div>
 					</form>
 					<!-- End of form for step 1 -->
@@ -42,7 +43,7 @@
 						<!-- This div contains 200-fied text and copy botton-->
 						<div class="form-group">
 							<div class="col-md-12">
-								<textarea class="form-control" id="step2-1" type="text" row="2" readonly></textarea>
+								<textarea class="form-control" id="step2-2" type="text" row="2" readonly></textarea>
 								<button type="button" class="btn btn-primary btn-md right">Copy</button>
 							</div>
 						</div>
@@ -50,7 +51,7 @@
 						<!-- This div contains 200-fied text and copy botton-->
 						<div class="form-group">
 							<div class="col-md-12">
-								<textarea class="form-control" id="step2-1" type="text" row="2" readonly></textarea>
+								<textarea class="form-control" id="step2-3" type="text" row="2" readonly></textarea>
 								<button type="button" class="btn btn-primary btn-md">Copy</button>
 							</div>
 						</div>
