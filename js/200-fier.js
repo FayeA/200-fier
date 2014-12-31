@@ -41,8 +41,11 @@ if(step1.length <= 200){
 				y = x[i].split(" ");
 				tempx = y.pop();
 				x[i] = y.join(" ");
-				tempx = tempx + " ";
-				x[i+1] = tempx + x[i+1];
+				if (x[i+1] === undefined){
+					x[i+1] = tempx;
+				} else {
+					x[i+1] = tempx + " " + x[i+1];
+				}
 			}
 		}
 
