@@ -29,20 +29,32 @@ p{
 }
 
 textarea{
-  box-shadow:inset 0px 1px 0px 0px #ffffff;
+  box-shadow: inset 0px 1px 0px 0px #ffffff;
   background-color:#ededed;
 	border:1px solid #dcdcdc;
 	display:block;
   width: 90%;
-  min-height:  90px;
   margin-top: 0;
   margin-bottom: 4px;
   font-size: 9pt;
   color: #333;
+  min-height: 150px;
 }
 
-textarea.step2form{margin-bottom: 2px;}
-textarea.step2form:hover {background-color:#ddd;}
-textarea.step2form:active {background-color:#87cae7}
-
+div.step2form{
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+  background-color:#ededed;
+	border:1px solid #dcdcdc;
+	display:block;
+	margin-bottom: 2px;
+	border: 1px solid #dcdcdc;
+	padding: 5px;
+	font-size: 9pt;
+  color: #333;
+}
+div.step2form:hover {background-color:#ddd;}
+div.step2form:active {background-color:#87cae7}
+p.instr{
+	font-size: 8pt;
+}
 

@@ -4,6 +4,7 @@ function clearstep1(){
 	location.reload();
 }
 
+
 function step1(){
 
 	$(".content").append('<form class="form-horizontal" id="step2form"><label for="step2"><h2>Step 2 <small>Click the textboxes to copy the 200-fied texts. Paste them to their destination.</small></h2></label></form>');
@@ -43,10 +44,13 @@ function step1(){
 	//add value to step2 textareas
 
 		for (j = 0; j < x.length; j++){
-			var HTMLstep2 = '<div class="form-group"><textarea class="step2form" id="step2-%" type="text" row="3" onclick="ClipBoard(this)" readonly></textarea><p>Click the textbox to copy. Length: ~ characters</p></div>';
-			formattedStep2 = HTMLstep2.replace("%",x + "-" + j).replace("~", x[j].length);
+			var HTMLstep2 = '<div class="form-group"><div class="step2form" id="step2-%" onclick="ClipBoard(this)"></div><p class="instr">Length: ~ chars</p></div>';
+			var xid = k+""+i+""+j;
+			formattedStep2 = HTMLstep2.replace("%",xid).replace("~", x[j].length);
 			$("#step2form").append(formattedStep2);
-			document.getElementById("step2-" + x + "-" + j).value = x[j];
+			
+			//$(xid).text(x[j]);
+			document.getElementById("step2-" + xid).innerText = x[j];
 		}// end of for
 
 
