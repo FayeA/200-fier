@@ -18,7 +18,8 @@ function step1(){
 	for (k=0; k < w.length; k++){
 
 		//split the text
-		var x = w[k].replace(/.{200}\S*\s+/g,"$&@").split(/\s+@/);
+		var x = null
+		x = w[k].replace(/.{200}\S*\s+/g,"$&@").split(/\s+@/);
 
 		//ensure only 200 characters per array item
 		//and if greater than 200 characters, fix
@@ -43,10 +44,11 @@ function step1(){
 
 		for (j = 0; j < x.length; j++){
 			var HTMLstep2 = '<div class="form-group"><textarea class="step2form" id="step2-%" type="text" row="3" onclick="ClipBoard(this)" readonly></textarea><p>Click the textbox to copy. Length: ~ characters</p></div>';
-			formattedStep2 = HTMLstep2.replace("%",j).replace("~", x[j].length);
+			formattedStep2 = HTMLstep2.replace("%",x + "-" + j).replace("~", x[j].length);
 			$("#step2form").append(formattedStep2);
-			document.getElementById("step2-"+j).value = x[j];
+			document.getElementById("step2-" + x + "-" + j).value = x[j];
 		}// end of for
+
 
 		}// end for new line
 
